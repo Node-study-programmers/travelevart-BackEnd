@@ -262,12 +262,13 @@ export class PostService implements OnModuleInit {
   }
 
   // 인기 게시물 업데이트
-  async updatePopularPosts() {
-    const popularTravelPosts = await this.calculatePopularPosts('Stories');
-    await this.redisService.setPopularTravelPostsCache(JSON.stringify(popularTravelPosts), 60 * 60 * 24);
+  // async updatePopularPosts() {
+  updatePopularPosts() {
+    // const popularTravelPosts = await this.calculatePopularPosts('Stories');
+    // await this.redisService.setPopularTravelPostsCache(JSON.stringify(popularTravelPosts), 60 * 60 * 24);
 
-    const popularNormalPosts = await this.calculatePopularPosts('Questions');
-    await this.redisService.setPopularNormalPostsCache(JSON.stringify(popularNormalPosts), 60 * 60 * 24);
+    // const popularNormalPosts = await this.calculatePopularPosts('Questions');
+    // await this.redisService.setPopularNormalPostsCache(JSON.stringify(popularNormalPosts), 60 * 60 * 24);
   }
 
   // 게시물 상세 조회
